@@ -3,6 +3,7 @@ package com.bizgroup
 class Member {
 
 	//Long InternalId - no need Grails adds it autmaticcaly
+	//
 	Long internalGroupId
 	String externalID
 	String name
