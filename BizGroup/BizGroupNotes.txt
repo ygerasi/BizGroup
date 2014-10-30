@@ -1,0 +1,23 @@
+add to BuildConfig:
+In plugins: runtime ':resources:1.2.13' // yg for ajax
+===
+$(function() {
+    $('#loginForm').ajaxForm(function(result) {
+        $('#loginBox').html(result);
+    });
+});
+</r:script>
+That code depends on the jQuery Form Plug-in from https://github.com/malsup/form. Note that is not a Grails plug-in. Download the jquery.form.js file from that repository and put it in the web-app/js/ directory. Once the file is in place, edit grails-app/conf/ApplicationResources.groovy to look like Listing 8-8.
+Listing 8-8. Add jQuery Form Code to ApplicationResources.groovy
+
+// grails-app/conf/ApplicationResources.groovy
+modules = {
+    application {
+        resource url:'js/application.js'
+        resource url:'js/jquery.form.js'
+    }
+}
+
+==================================================
+hebrew support: dir="rtl" in html tag of main.gsp
+==================================================
